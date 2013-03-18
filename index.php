@@ -11,8 +11,9 @@
 	$departments = $db->GetAll('select * from departments');
 	$personnels = $db->GetAll('select * from personal where pos_id=11');
 	// print_r($departments);
+	
 	foreach($departments as $item){
-		echo $item['departments'].'<br>';
+		echo $item['dep_id'].' = '.$item['departments'].'<br>';
 	}
 	echo '<br><br>';
 	print_r($personnels);
